@@ -8,231 +8,269 @@
 
 <meta name="description" content="Official personal website of Mohd Anas Siddiqui - Web Designer, Digital Creator and Computer Professional.">
 
+<meta name="author" content="Mohd Anas Siddiqui">
+
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #080808;
-    color: #ffffff;
-    line-height: 1.6;
+body{
+    font-family:Arial, sans-serif;
+    background:#080808;
+    color:#fff;
+    line-height:1.6;
 }
 
-/* Navigation */
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(17,17,17,0.97);
-    border-bottom: 1px solid #c9a227;
-    padding: 15px 20px;
-    text-align: center;
+/* NAVIGATION */
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(10,10,10,.97);
+    border-bottom:1px solid #d4af37;
+    padding:16px 10px;
+    text-align:center;
+    backdrop-filter:blur(8px);
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 12px;
-    font-weight: bold;
-    transition: 0.3s;
+nav a{
+    display:inline-block;
+    color:#fff;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:15px;
+    font-weight:bold;
+    transition:.3s;
 }
 
-nav a:hover {
-    color: #d4af37;
+nav a:hover{
+    color:#d4af37;
 }
 
-/* Home */
-.hero {
-    min-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 50px 20px;
+/* HERO */
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 20px;
     background:
-        radial-gradient(circle at top, #29230f 0%, #111111 35%, #050505 75%);
+    radial-gradient(circle at top,#30270d 0%,#111 35%,#050505 75%);
 }
 
-.hero-content {
-    max-width: 800px;
+.hero-content{
+    width:100%;
+    max-width:850px;
 }
 
-.hero h1 {
-    font-size: 48px;
-    color: #d4af37;
-    margin-bottom: 10px;
+.hero h1{
+    font-size:50px;
+    color:#d4af37;
+    margin-bottom:12px;
+    line-height:1.15;
 }
 
-.hero h2 {
-    font-size: 25px;
-    margin-bottom: 18px;
+.hero h2{
+    font-size:26px;
+    margin-bottom:15px;
 }
 
-.hero h3 {
-    color: #d4af37;
-    font-size: 19px;
-    margin-bottom: 18px;
+.hero h3{
+    color:#d4af37;
+    font-size:18px;
+    margin-bottom:20px;
 }
 
-.hero p {
-    color: #cccccc;
-    max-width: 650px;
-    margin: auto;
-    font-size: 17px;
+.hero p{
+    max-width:680px;
+    margin:auto;
+    color:#ccc;
+    font-size:17px;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 28px;
-    padding: 13px 28px;
-    background: #d4af37;
-    color: #111111;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
+.btn,
+.contact-btn{
+    display:inline-block;
+    margin-top:28px;
+    padding:14px 30px;
+    background:#d4af37;
+    color:#111;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+    box-shadow:0 5px 20px rgba(212,175,55,.18);
 }
 
-.btn:hover {
-    background: #ffffff;
-    transform: translateY(-2px);
+.btn:hover,
+.contact-btn:hover{
+    background:#fff;
+    transform:translateY(-3px);
 }
 
-/* Sections */
-section {
-    padding: 75px 20px;
-    max-width: 1000px;
-    margin: auto;
+/* SECTIONS */
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:80px 20px;
 }
 
-section h2 {
-    text-align: center;
-    color: #d4af37;
-    font-size: 32px;
-    margin-bottom: 35px;
+section h2{
+    text-align:center;
+    color:#d4af37;
+    font-size:34px;
+    margin-bottom:38px;
 }
 
-.card {
-    background: #151515;
-    border: 1px solid #333333;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.45);
+/* CARD */
+.card{
+    background:linear-gradient(145deg,#181818,#101010);
+    border:1px solid #333;
+    border-radius:18px;
+    padding:32px;
+    box-shadow:0 8px 30px rgba(0,0,0,.5);
 }
 
-.card p {
-    color: #dddddd;
+.card p{
+    color:#ddd;
+    font-size:16px;
 }
 
-/* Skills */
-.skills {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+/* SKILLS */
+.skills{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
 }
 
-.skill {
-    background: #151515;
-    border: 1px solid #333333;
-    padding: 18px;
-    text-align: center;
-    border-radius: 12px;
-    transition: 0.3s;
+.skill{
+    background:#151515;
+    border:1px solid #333;
+    padding:20px 12px;
+    text-align:center;
+    border-radius:14px;
+    color:#eee;
+    font-weight:bold;
+    transition:.3s;
 }
 
-.skill:hover {
-    border-color: #d4af37;
-    transform: translateY(-4px);
+.skill:hover{
+    border-color:#d4af37;
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(212,175,55,.12);
 }
 
-/* Contact */
-.contact-box {
-    text-align: center;
+/* CONTACT */
+.contact-box{
+    text-align:center;
 }
 
-.contact-item {
-    margin: 20px 0;
-    font-size: 18px;
+.contact-item{
+    margin:22px 0;
+    font-size:18px;
+    color:#eee;
 }
 
-.contact-item a {
-    color: #d4af37;
-    text-decoration: none;
-    font-weight: bold;
+.contact-item a{
+    color:#d4af37;
+    text-decoration:none;
+    font-weight:bold;
+    word-break:break-word;
 }
 
-.contact-item a:hover {
-    color: #ffffff;
+.contact-item a:hover{
+    color:#fff;
 }
 
-.contact-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 13px 28px;
-    background: #d4af37;
-    color: #111111;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
+.contact-location{
+    color:#eee;
+    font-weight:bold;
 }
 
-.contact-btn:hover {
-    background: #ffffff;
+.contact-btn{
+    margin-top:15px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 28px 15px;
-    background: #111111;
-    border-top: 1px solid #333333;
-    color: #aaaaaa;
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px 15px;
+    background:#111;
+    border-top:1px solid #333;
+    color:#aaa;
+    font-size:14px;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
+/* MOBILE */
+@media(max-width:700px){
 
-    nav a {
-        margin: 0 5px;
-        font-size: 13px;
+    nav{
+        padding:13px 5px;
     }
 
-    .hero {
-        min-height: 85vh;
+    nav a{
+        margin:4px 6px;
+        font-size:13px;
     }
 
-    .hero h1 {
-        font-size: 34px;
+    .hero{
+        min-height:82vh;
+        padding:50px 18px;
     }
 
-    .hero h2 {
-        font-size: 21px;
+    .hero h1{
+        font-size:35px;
     }
 
-    .hero h3 {
-        font-size: 17px;
+    .hero h2{
+        font-size:21px;
     }
 
-    section {
-        padding: 55px 15px;
+    .hero h3{
+        font-size:16px;
+        line-height:1.7;
     }
 
-    section h2 {
-        font-size: 28px;
+    .hero p{
+        font-size:15px;
     }
 
-    .skills {
-        grid-template-columns: 1fr;
+    section{
+        padding:60px 15px;
     }
 
-    .card {
-        padding: 22px;
+    section h2{
+        font-size:29px;
+        margin-bottom:30px;
+    }
+
+    .card{
+        padding:23px 18px;
+    }
+
+    .skills{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+
+    .skill{
+        padding:17px 10px;
+    }
+
+    .contact-item{
+        font-size:16px;
+        margin:20px 0;
+    }
+
+    .btn,
+    .contact-btn{
+        padding:13px 24px;
+        font-size:15px;
     }
 }
 </style>
@@ -240,7 +278,7 @@ footer {
 
 <body>
 
-<!-- Navigation -->
+<!-- NAVIGATION -->
 <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -248,7 +286,7 @@ footer {
     <a href="#contact">Contact</a>
 </nav>
 
-<!-- Home -->
+<!-- HOME -->
 <section id="home" class="hero">
     <div class="hero-content">
 
@@ -261,7 +299,7 @@ footer {
         <p>
             Welcome to my personal website.
             I am interested in web designing, technology,
-            digital creativity and learning new skills.
+            digital creativity and learning new digital skills.
         </p>
 
         <a href="#about" class="btn">Explore My Website</a>
@@ -269,7 +307,7 @@ footer {
     </div>
 </section>
 
-<!-- About -->
+<!-- ABOUT -->
 <section id="about">
 
     <h2>About Me</h2>
@@ -301,7 +339,7 @@ footer {
 
 </section>
 
-<!-- Skills -->
+<!-- SKILLS -->
 <section id="skills">
 
     <h2>My Skills</h2>
@@ -325,7 +363,7 @@ footer {
 
 </section>
 
-<!-- Contact -->
+<!-- CONTACT -->
 <section id="contact">
 
     <h2>Contact Me</h2>
@@ -346,7 +384,9 @@ footer {
 
         <div class="contact-item">
             📍 Location:
-            <strong>Prayagraj, Uttar Pradesh</strong>
+            <span class="contact-location">
+                Prayagraj, Uttar Pradesh
+            </span>
         </div>
 
         <a href="mailto:anas9533@gmail.com" class="contact-btn">
@@ -357,7 +397,7 @@ footer {
 
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
     <p>© 2026 Mohd Anas Siddiqui. All Rights Reserved.</p>
 </footer>
