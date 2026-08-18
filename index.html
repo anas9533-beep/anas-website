@@ -3,214 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Mohd Anas Siddiqui | Personal Website</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#080808;
-    color:white;
-    line-height:1.6;
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-header{
-    background:#080808;
-    border-bottom:1px solid #d4af37;
-    padding:18px 6%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
+/* Navigation */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #111111;
+    border-bottom: 1px solid #c9a227;
+    padding: 15px 20px;
+    text-align: center;
 }
 
-.logo{
-    color:#d4af37;
-    font-size:20px;
-    font-weight:bold;
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:15px;
-    font-size:14px;
+nav a:hover {
+    color: #d4af37;
 }
 
-nav a:hover{
-    color:#d4af37;
+/* Hero */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #050505, #1a1a1a);
 }
 
-.hero{
-    min-height:90vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:40px 20px;
-    background:linear-gradient(135deg,#050505,#1b1508,#050505);
+.hero h1 {
+    font-size: 42px;
+    color: #d4af37;
+    margin-bottom: 10px;
 }
 
-.hero-box{
-    max-width:750px;
+.hero h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
 }
 
-.photo{
-    width:140px;
-    height:140px;
-    border:3px solid #d4af37;
-    border-radius:50%;
-    margin:0 auto 25px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:55px;
-    background:#111;
+.hero p {
+    color: #cccccc;
+    max-width: 650px;
+    margin: auto;
 }
 
-h1{
-    font-size:42px;
-    color:#d4af37;
-    margin-bottom:10px;
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #d4af37;
+    color: #111111;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
 }
 
-.hero h2{
-    font-size:21px;
-    margin-bottom:18px;
+.btn:hover {
+    background: #ffffff;
 }
 
-.hero p{
-    color:#ccc;
+/* Sections */
+section {
+    padding: 70px 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-.btn{
-    display:inline-block;
-    padding:12px 25px;
-    margin:25px 6px 0;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
+section h2 {
+    text-align: center;
+    color: #d4af37;
+    font-size: 30px;
+    margin-bottom: 30px;
 }
 
-.gold{
-    background:#d4af37;
-    color:#000;
+.card {
+    background: #151515;
+    border: 1px solid #333333;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
 }
 
-.outline{
-    border:1px solid #d4af37;
-    color:#d4af37;
+/* Skills */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
 }
 
-section{
-    padding:70px 7%;
+.skill {
+    background: #151515;
+    border: 1px solid #333333;
+    padding: 18px;
+    text-align: center;
+    border-radius: 10px;
 }
 
-.title{
-    text-align:center;
-    color:#d4af37;
-    font-size:30px;
-    margin-bottom:35px;
+/* Contact */
+.contact-box {
+    text-align: center;
 }
 
-.about{
-    max-width:800px;
-    margin:auto;
-    text-align:center;
-    color:#ccc;
+.contact-item {
+    margin: 18px 0;
+    font-size: 18px;
 }
 
-.skills{
-    max-width:900px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
+.contact-item a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.card{
-    background:#111;
-    border:1px solid #333;
-    border-radius:15px;
-    padding:25px 15px;
-    text-align:center;
+.contact-item a:hover {
+    color: #ffffff;
 }
 
-.card:hover{
-    border-color:#d4af37;
-    transform:translateY(-4px);
+.contact-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 13px 28px;
+    background: #d4af37;
+    color: #111111;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
 }
 
-.card h3{
-    color:#d4af37;
-    margin-bottom:8px;
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    background: #111111;
+    border-top: 1px solid #333333;
+    color: #aaaaaa;
 }
 
-.contact{
-    max-width:700px;
-    margin:auto;
-}
+/* Mobile */
+@media (max-width: 600px) {
 
-.contact-box{
-    background:#111;
-    border:1px solid #333;
-    border-radius:15px;
-    padding:20px;
-    margin:15px 0;
-    text-align:center;
-}
-
-.contact-box strong{
-    color:#d4af37;
-}
-
-.contact-box a{
-    color:white;
-    text-decoration:none;
-}
-
-footer{
-    background:#050505;
-    border-top:1px solid #333;
-    text-align:center;
-    padding:25px;
-    color:#aaa;
-}
-
-footer span{
-    color:#d4af37;
-}
-
-@media(max-width:650px){
-
-    header{
-        flex-direction:column;
-        gap:12px;
+    nav a {
+        margin: 0 6px;
+        font-size: 14px;
     }
 
-    nav a{
-        margin:0 5px;
-        font-size:12px;
+    .hero h1 {
+        font-size: 32px;
     }
 
-    h1{
-        font-size:32px;
+    .hero h2 {
+        font-size: 19px;
     }
 
-    .hero h2{
-        font-size:18px;
+    section {
+        padding: 55px 15px;
     }
 
-    section{
-        padding:55px 6%;
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 22px;
     }
 }
 </style>
@@ -218,121 +196,94 @@ footer span{
 
 <body>
 
-<header>
-    <div class="logo">Mohd Anas Siddiqui</div>
+<!-- Navigation -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<section class="hero" id="home">
-
-    <div class="hero-box">
-
-        <div class="photo">👤</div>
-
+<!-- Home -->
+<section id="home" class="hero">
+    <div>
         <h1>Mohd Anas Siddiqui</h1>
-
-        <h2>Computer Professional & Stenographer</h2>
-
+        <h2>Welcome to My Personal Website</h2>
         <p>
+            Hello! I am Mohd Anas Siddiqui.
             Welcome to my personal website.
-            I am interested in computer work, data entry,
-            documentation, DTP and professional office work.
         </p>
 
-        <a href="#about" class="btn gold">About Me</a>
-
-        <a href="#contact" class="btn outline">Contact Me</a>
-
+        <a href="#about" class="btn">Explore My Website</a>
     </div>
-
 </section>
 
+<!-- About -->
 <section id="about">
+    <h2>About Me</h2>
 
-    <h2 class="title">About Me</h2>
+    <div class="card">
+        <p>
+            Welcome to my personal website. I am interested in
+            computers, technology and learning new digital skills.
+        </p>
 
-    <div class="about">
+        <br>
 
         <p>
-            Hello! I am <strong>Mohd Anas Siddiqui</strong>.
-            I have experience in computer-related office work,
-            documentation, data entry and typing.
-            I am always interested in learning new technology
-            and improving my professional skills.
+            This website is created to introduce myself,
+            my skills and my contact information.
         </p>
-
     </div>
-
 </section>
 
+<!-- Skills -->
 <section id="skills">
-
-    <h2 class="title">My Skills</h2>
+    <h2>My Skills</h2>
 
     <div class="skills">
-
-        <div class="card">
-            <h3>MS Word</h3>
-            <p>Document preparation</p>
-        </div>
-
-        <div class="card">
-            <h3>MS Excel</h3>
-            <p>Data management</p>
-        </div>
-
-        <div class="card">
-            <h3>PowerPoint</h3>
-            <p>Professional presentations</p>
-        </div>
-
-        <div class="card">
-            <h3>DTP</h3>
-            <p>Design & formatting</p>
-        </div>
-
-        <div class="card">
-            <h3>English Typing</h3>
-            <p>Fast & accurate typing</p>
-        </div>
-
-        <div class="card">
-            <h3>Hindi Typing</h3>
-            <p>Hindi documentation</p>
-        </div>
-
+        <div class="skill">💻 MS Word</div>
+        <div class="skill">📊 MS Excel</div>
+        <div class="skill">📽️ MS PowerPoint</div>
+        <div class="skill">⌨️ English Typing</div>
+        <div class="skill">⌨️ Hindi Typing</div>
+        <div class="skill">🎨 DTP</div>
     </div>
-
 </section>
 
-<section id="contact">
+<!-- Contact -->
 <section id="contact">
     <h2>Contact Me</h2>
 
-    <p>📱 <strong>Mobile:</strong>
-        <a href="tel:8799028385">8799028385</a>
-    </p>
+    <div class="card contact-box">
 
-    <p>📧 <strong>Email:</strong>
-        <a href="mailto:anas9533@gmail.com">anas9533@gmail.com</a>
-    </p>
+        <div class="contact-item">
+            📱 Mobile:
+            <a href="tel:8799028385">8799028385</a>
+        </div>
 
-    <p>📍 <strong>Location:</strong> Prayagraj, Uttar Pradesh</p>
+        <div class="contact-item">
+            📧 Email:
+            <a href="mailto:anas9533@gmail.com">
+                anas9533@gmail.com
+            </a>
+        </div>
 
-    <a href="mailto:anas9533@gmail.com" class="contact-btn">
-        Send Message
-    </a>
+        <div class="contact-item">
+            📍 Location:
+            <strong>Prayagraj, Uttar Pradesh</strong>
+        </div>
 
+        <a href="mailto:anas9533@gmail.com" class="contact-btn">
+            ✉️ Send Message
+        </a>
+
+    </div>
 </section>
 
+<!-- Footer -->
 <footer>
-    © 2026 <span>Mohd Anas Siddiqui</span> | All Rights Reserved
+    <p>© 2026 Mohd Anas Siddiqui. All Rights Reserved.</p>
 </footer>
 
 </body>
