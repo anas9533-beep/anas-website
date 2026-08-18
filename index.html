@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohd Anas Siddiqui | Portfolio</title>
+
+<title>Mohd Anas Siddiqui | Personal Website</title>
 
 <style>
 *{
@@ -14,31 +15,39 @@
 }
 
 body{
-    font-family:Arial,sans-serif;
-    background:#f4f7fb;
-    color:#1f2937;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#080808;
+    color:#fff;
     line-height:1.6;
 }
 
-nav{
+header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:#0f172a;
-    padding:15px 10px;
-    text-align:center;
+    background:#080808;
+    border-bottom:1px solid #b8860b;
+    padding:15px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 10px;
-    font-size:14px;
+.logo{
+    color:#d4af37;
+    font-size:22px;
     font-weight:bold;
 }
 
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:18px;
+    font-size:14px;
+}
+
 nav a:hover{
-    color:#38bdf8;
+    color:#d4af37;
 }
 
 .hero{
@@ -47,124 +56,163 @@ nav a:hover{
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:40px 20px;
-    color:white;
-    background:linear-gradient(135deg,#0f172a,#1d4ed8);
+    padding:50px 20px;
+    background:linear-gradient(135deg,#080808,#17120a,#080808);
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.profile{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    border:3px solid #d4af37;
+    margin-bottom:20px;
+    object-fit:cover;
+    background:#151515;
 }
 
 .hero h1{
-    font-size:46px;
+    font-size:42px;
+    color:#d4af37;
     margin-bottom:10px;
 }
 
 .hero h2{
-    color:#38bdf8;
-    font-size:25px;
-    margin-bottom:20px;
+    font-size:22px;
+    color:#fff;
+    margin-bottom:15px;
 }
 
 .hero p{
+    color:#ccc;
     max-width:650px;
     margin:auto;
-    font-size:18px;
-    color:#e5e7eb;
 }
 
 .btn{
     display:inline-block;
-    margin-top:25px;
-    padding:13px 28px;
-    background:#38bdf8;
-    color:#0f172a;
-    text-decoration:none;
+    margin:25px 8px 0;
+    padding:12px 25px;
     border-radius:30px;
+    text-decoration:none;
     font-weight:bold;
 }
 
-.btn:hover{
-    background:white;
+.btn-gold{
+    background:#d4af37;
+    color:#000;
+}
+
+.btn-dark{
+    border:1px solid #d4af37;
+    color:#d4af37;
 }
 
 section{
-    max-width:1000px;
-    margin:auto;
-    padding:70px 20px;
+    padding:70px 8%;
 }
 
-section h2{
+.section-title{
     text-align:center;
-    color:#1d4ed8;
-    font-size:32px;
-    margin-bottom:35px;
+    color:#d4af37;
+    font-size:30px;
+    margin-bottom:40px;
 }
 
 .about{
-    max-width:750px;
+    max-width:850px;
     margin:auto;
     text-align:center;
-    font-size:17px;
+    color:#ccc;
 }
 
 .skills{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
     gap:20px;
+    max-width:900px;
+    margin:auto;
 }
 
 .skill{
-    background:white;
-    padding:25px 15px;
-    text-align:center;
-    border-radius:12px;
-    font-weight:bold;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.card{
-    background:white;
+    background:#111;
+    border:1px solid #333;
+    border-radius:15px;
     padding:25px;
-    margin-bottom:20px;
-    border-radius:12px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    text-align:center;
+    transition:0.3s;
 }
 
-.card h3{
-    color:#1d4ed8;
+.skill:hover{
+    transform:translateY(-5px);
+    border-color:#d4af37;
+}
+
+.skill h3{
+    color:#d4af37;
     margin-bottom:8px;
 }
 
-.contact{
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    display:grid;
+    gap:15px;
+}
+
+.contact-item{
+    background:#111;
+    border:1px solid #333;
+    border-radius:12px;
+    padding:18px;
     text-align:center;
 }
 
-.contact p{
-    margin:12px 0;
-    font-size:17px;
+.contact-item strong{
+    color:#d4af37;
+}
+
+.contact-item a{
+    color:#fff;
+    text-decoration:none;
 }
 
 footer{
-    background:#0f172a;
-    color:white;
     text-align:center;
-    padding:25px 15px;
+    padding:25px;
+    border-top:1px solid #333;
+    color:#aaa;
+    background:#050505;
 }
 
-@media(max-width:600px){
+footer span{
+    color:#d4af37;
+}
+
+@media(max-width:650px){
+    header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav a{
+        margin:0 6px;
+        font-size:12px;
+    }
+
     .hero h1{
         font-size:32px;
     }
 
     .hero h2{
-        font-size:20px;
-    }
-
-    nav a{
-        margin:0 4px;
-        font-size:12px;
+        font-size:18px;
     }
 
     section{
-        padding:50px 15px;
+        padding:55px 6%;
     }
 }
 </style>
@@ -172,124 +220,118 @@ footer{
 
 <body>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-<a href="#education">Education</a>
-<a href="#contact">Contact</a>
-</nav>
+<header>
+    <div class="logo">Mohd Anas Siddiqui</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
 <section class="hero" id="home">
-<div>
-<h1>Mohd Anas Siddiqui</h1>
-<h2>Computer Professional</h2>
+    <div class="hero-content">
 
-<p>
-Welcome to my professional portfolio website.
-I am skilled in computer operations, data entry,
-MS Office, DTP and professional documentation.
-</p>
+        <!-- Photo baad mein yahan laga sakte hain -->
+        <div class="profile"></div>
 
-<a href="#about" class="btn">View My Profile</a>
-</div>
+        <h1>Mohd Anas Siddiqui</h1>
+
+        <h2>Computer Professional & Stenographer</h2>
+
+        <p>
+            Welcome to my personal website. I am interested in
+            computer work, data entry, documentation, DTP and
+            professional office work.
+        </p>
+
+        <a href="#about" class="btn btn-gold">About Me</a>
+        <a href="#contact" class="btn btn-dark">Contact Me</a>
+
+    </div>
 </section>
 
 <section id="about">
-<h2>About Me</h2>
+    <h2 class="section-title">About Me</h2>
 
-<p class="about">
-Hello! I am Mohd Anas Siddiqui. I have experience
-in computer operations, data entry, documentation
-and office work. I am always interested in learning
-new skills and improving my professional knowledge.
-</p>
+    <div class="about">
+        <p>
+            Hello! I am <strong>Mohd Anas Siddiqui</strong>.
+            I have experience in computer-related office work,
+            documentation, data entry and typing.
+            I enjoy learning new technology and improving my
+            professional skills.
+        </p>
+    </div>
 </section>
 
 <section id="skills">
-<h2>My Skills</h2>
+    <h2 class="section-title">My Skills</h2>
 
-<div class="skills">
+    <div class="skills">
 
-<div class="skill">MS Word</div>
-<div class="skill">MS Excel</div>
-<div class="skill">MS PowerPoint</div>
-<div class="skill">DTP</div>
-<div class="skill">Data Entry</div>
-<div class="skill">English Typing</div>
-<div class="skill">Hindi Typing</div>
-<div class="skill">Computer Operations</div>
+        <div class="skill">
+            <h3>MS Word</h3>
+            <p>Professional document preparation</p>
+        </div>
 
-</div>
+        <div class="skill">
+            <h3>MS Excel</h3>
+            <p>Data management and spreadsheets</p>
+        </div>
+
+        <div class="skill">
+            <h3>MS PowerPoint</h3>
+            <p>Professional presentations</p>
+        </div>
+
+        <div class="skill">
+            <h3>DTP</h3>
+            <p>Design and document formatting</p>
+        </div>
+
+        <div class="skill">
+            <h3>English Typing</h3>
+            <p>Fast and accurate typing</p>
+        </div>
+
+        <div class="skill">
+            <h3>Hindi Typing</h3>
+            <p>Hindi typing and documentation</p>
+        </div>
+
+    </div>
 </section>
 
-<section id="experience">
-<h2>Work Experience</h2>
-
-<div class="card">
-<h3>Stenographer</h3>
-<p>Allahabad High Court</p>
-</div>
-
-<div class="card">
-<h3>Data Entry Operator</h3>
-<p>Delhi Law House — 2 Years</p>
-</div>
-
-<div class="card">
-<h3>Office / Data Entry Work</h3>
-<p>Income Tax Department — 2 Years</p>
-</div>
-
-<div class="card">
-<h3>Office Work</h3>
-<p>Law Links House — 1 Year</p>
-</div>
-
-</section>
-
-<section id="education">
-<h2>Education</h2>
-
-<div class="card">
-<h3>Master of Arts (M.A.) English</h3>
-<p>Rajju Bhaiya Open University — 2015</p>
-</div>
-
-<div class="card">
-<h3>Bachelor of Arts (B.A.)</h3>
-<p>Rajju Bhaiya Open University — 2013</p>
-</div>
-
-<div class="card">
-<h3>Intermediate</h3>
-<p>U.P. Board — 2006</p>
-</div>
-
-<div class="card">
-<h3>High School</h3>
-<p>U.P. Board — 2004</p>
-</div>
-
-</section>
 <section id="contact">
-    <h2>Contact Me</h2>
+    <h2 class="section-title">Contact Me</h2>
 
-    <div class="contact">
-        <p>📧 Email: anas9533@gmail.com</p>
-        <p>📱 Phone: 8799028385</p>
-        <p>📍 Location: Prayagraj, Uttar Pradesh</p>
+    <div class="contact-box">
 
-        <a href="mailto:anas9533@gmail.com" class="btn">
-            Send Me an Email
-        </a>
+        <div class="contact-item">
+            📱 <strong>Mobile</strong><br>
+            <a href="tel:+919000000000">Call Me</a>
+        </div>
+
+        <div class="contact-item">
+            📧 <strong>Email</strong><br>
+            <a href="mailto:yourmail@example.com">
+                yourmail@example.com
+            </a>
+        </div>
+
+        <div class="contact-item">
+            📍 <strong>Location</strong><br>
+            Prayagraj, Uttar Pradesh, India
+        </div>
+
     </div>
 </section>
 
 <footer>
-<p>© 2026 Mohd Anas Siddiqui. All Rights Reserved.</p>
-<p>Professional Personal Portfolio</p>
+    © 2026 <span>Mohd Anas Siddiqui</span> | All Rights Reserved
 </footer>
 
 </body>
