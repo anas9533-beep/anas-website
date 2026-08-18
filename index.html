@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mohd Anas Siddiqui | Personal Website</title>
+<title>Mohd Anas Siddiqui | Web Designer & Digital Creator</title>
+
+<meta name="description" content="Official personal website of Mohd Anas Siddiqui - Web Designer, Digital Creator and Computer Professional.">
 
 <style>
 * {
@@ -16,7 +18,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #0b0b0b;
+    background: #080808;
     color: #ffffff;
     line-height: 1.6;
 }
@@ -26,7 +28,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #111111;
+    background: rgba(17,17,17,0.97);
     border-bottom: 1px solid #c9a227;
     padding: 15px 20px;
     text-align: center;
@@ -37,58 +39,73 @@ nav a {
     text-decoration: none;
     margin: 0 12px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #d4af37;
 }
 
-/* Hero */
+/* Home */
 .hero {
     min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #050505, #1a1a1a);
+    padding: 50px 20px;
+    background:
+        radial-gradient(circle at top, #29230f 0%, #111111 35%, #050505 75%);
+}
+
+.hero-content {
+    max-width: 800px;
 }
 
 .hero h1 {
-    font-size: 42px;
+    font-size: 48px;
     color: #d4af37;
     margin-bottom: 10px;
 }
 
 .hero h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.hero h3 {
+    color: #d4af37;
+    font-size: 19px;
+    margin-bottom: 18px;
 }
 
 .hero p {
     color: #cccccc;
     max-width: 650px;
     margin: auto;
+    font-size: 17px;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
+    margin-top: 28px;
+    padding: 13px 28px;
     background: #d4af37;
     color: #111111;
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn:hover {
     background: #ffffff;
+    transform: translateY(-2px);
 }
 
 /* Sections */
 section {
-    padding: 70px 20px;
+    padding: 75px 20px;
     max-width: 1000px;
     margin: auto;
 }
@@ -96,16 +113,20 @@ section {
 section h2 {
     text-align: center;
     color: #d4af37;
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 32px;
+    margin-bottom: 35px;
 }
 
 .card {
     background: #151515;
     border: 1px solid #333333;
-    border-radius: 15px;
+    border-radius: 16px;
     padding: 30px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.45);
+}
+
+.card p {
+    color: #dddddd;
 }
 
 /* Skills */
@@ -120,7 +141,13 @@ section h2 {
     border: 1px solid #333333;
     padding: 18px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    border-color: #d4af37;
+    transform: translateY(-4px);
 }
 
 /* Contact */
@@ -129,7 +156,7 @@ section h2 {
 }
 
 .contact-item {
-    margin: 18px 0;
+    margin: 20px 0;
     font-size: 18px;
 }
 
@@ -152,12 +179,17 @@ section h2 {
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #ffffff;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 25px 15px;
+    padding: 28px 15px;
     background: #111111;
     border-top: 1px solid #333333;
     color: #aaaaaa;
@@ -167,20 +199,32 @@ footer {
 @media (max-width: 600px) {
 
     nav a {
-        margin: 0 6px;
-        font-size: 14px;
+        margin: 0 5px;
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 85vh;
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 34px;
     }
 
     .hero h2 {
-        font-size: 19px;
+        font-size: 21px;
+    }
+
+    .hero h3 {
+        font-size: 17px;
     }
 
     section {
         padding: 55px 15px;
+    }
+
+    section h2 {
+        font-size: 28px;
     }
 
     .skills {
@@ -206,42 +250,64 @@ footer {
 
 <!-- Home -->
 <section id="home" class="hero">
-    <div>
+    <div class="hero-content">
+
         <h1>Mohd Anas Siddiqui</h1>
-        <h2>Welcome to My Personal Website</h2>
+
+        <h2>Web Designer & Digital Creator</h2>
+
+        <h3>💻 Website Designing • 🌐 Digital Skills • ✨ Creative Work</h3>
+
         <p>
-            Hello! I am Mohd Anas Siddiqui.
             Welcome to my personal website.
+            I am interested in web designing, technology,
+            digital creativity and learning new skills.
         </p>
 
         <a href="#about" class="btn">Explore My Website</a>
+
     </div>
 </section>
 
 <!-- About -->
 <section id="about">
+
     <h2>About Me</h2>
 
     <div class="card">
+
         <p>
-            Welcome to my personal website. I am interested in
-            computers, technology and learning new digital skills.
+            Hello! I am <strong>Mohd Anas Siddiqui</strong>.
+            Welcome to my personal website.
         </p>
 
         <br>
 
         <p>
-            This website is created to introduce myself,
-            my skills and my contact information.
+            I am interested in computers, web designing,
+            digital content creation and modern technology.
+            I enjoy learning new digital skills and creating
+            useful and attractive websites.
         </p>
+
+        <br>
+
+        <p>
+            This website represents my skills, interests
+            and digital work.
+        </p>
+
     </div>
+
 </section>
 
 <!-- Skills -->
 <section id="skills">
+
     <h2>My Skills</h2>
 
     <div class="skills">
+
         <div class="skill">🎨 DTP</div>
         <div class="skill">🌐 HTML</div>
         <div class="skill">🎨 CSS</div>
@@ -254,11 +320,14 @@ footer {
         <div class="skill">⌨️ English Typing – 50 WPM</div>
         <div class="skill">⌨️ Hindi Typing – 35 WPM</div>
         <div class="skill">⌨️ Urdu Typing – 25 WPM</div>
+
     </div>
+
 </section>
 
 <!-- Contact -->
 <section id="contact">
+
     <h2>Contact Me</h2>
 
     <div class="card contact-box">
@@ -285,6 +354,7 @@ footer {
         </a>
 
     </div>
+
 </section>
 
 <!-- Footer -->
