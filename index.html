@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Mohd Anas Siddiqui | Personal Website</title>
 
 <style>
@@ -15,34 +14,34 @@
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial, sans-serif;
     background:#080808;
-    color:#fff;
+    color:white;
     line-height:1.6;
 }
 
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
     background:#080808;
-    border-bottom:1px solid #b8860b;
-    padding:15px 6%;
+    border-bottom:1px solid #d4af37;
+    padding:18px 6%;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 .logo{
     color:#d4af37;
-    font-size:22px;
+    font-size:20px;
     font-weight:bold;
 }
 
 nav a{
-    color:#fff;
+    color:white;
     text-decoration:none;
-    margin-left:18px;
+    margin-left:15px;
     font-size:14px;
 }
 
@@ -56,136 +55,134 @@ nav a:hover{
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:50px 20px;
-    background:linear-gradient(135deg,#080808,#17120a,#080808);
+    padding:40px 20px;
+    background:linear-gradient(135deg,#050505,#1b1508,#050505);
 }
 
-.hero-content{
-    max-width:800px;
+.hero-box{
+    max-width:750px;
 }
 
-.profile{
-    width:130px;
-    height:130px;
-    border-radius:50%;
+.photo{
+    width:140px;
+    height:140px;
     border:3px solid #d4af37;
-    margin-bottom:20px;
-    object-fit:cover;
-    background:#151515;
+    border-radius:50%;
+    margin:0 auto 25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:55px;
+    background:#111;
 }
 
-.hero h1{
+h1{
     font-size:42px;
     color:#d4af37;
     margin-bottom:10px;
 }
 
 .hero h2{
-    font-size:22px;
-    color:#fff;
-    margin-bottom:15px;
+    font-size:21px;
+    margin-bottom:18px;
 }
 
 .hero p{
     color:#ccc;
-    max-width:650px;
-    margin:auto;
 }
 
 .btn{
     display:inline-block;
-    margin:25px 8px 0;
     padding:12px 25px;
+    margin:25px 6px 0;
     border-radius:30px;
     text-decoration:none;
     font-weight:bold;
 }
 
-.btn-gold{
+.gold{
     background:#d4af37;
     color:#000;
 }
 
-.btn-dark{
+.outline{
     border:1px solid #d4af37;
     color:#d4af37;
 }
 
 section{
-    padding:70px 8%;
+    padding:70px 7%;
 }
 
-.section-title{
+.title{
     text-align:center;
     color:#d4af37;
     font-size:30px;
-    margin-bottom:40px;
+    margin-bottom:35px;
 }
 
 .about{
-    max-width:850px;
+    max-width:800px;
     margin:auto;
     text-align:center;
     color:#ccc;
 }
 
 .skills{
+    max-width:900px;
+    margin:auto;
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
     gap:20px;
-    max-width:900px;
-    margin:auto;
 }
 
-.skill{
+.card{
     background:#111;
     border:1px solid #333;
     border-radius:15px;
-    padding:25px;
+    padding:25px 15px;
     text-align:center;
-    transition:0.3s;
 }
 
-.skill:hover{
-    transform:translateY(-5px);
+.card:hover{
     border-color:#d4af37;
+    transform:translateY(-4px);
 }
 
-.skill h3{
+.card h3{
     color:#d4af37;
     margin-bottom:8px;
 }
 
-.contact-box{
+.contact{
     max-width:700px;
     margin:auto;
-    display:grid;
-    gap:15px;
 }
 
-.contact-item{
+.contact-box{
     background:#111;
     border:1px solid #333;
-    border-radius:12px;
-    padding:18px;
+    border-radius:15px;
+    padding:20px;
+    margin:15px 0;
     text-align:center;
 }
 
-.contact-item strong{
+.contact-box strong{
     color:#d4af37;
 }
 
-.contact-item a{
-    color:#fff;
+.contact-box a{
+    color:white;
     text-decoration:none;
 }
 
 footer{
+    background:#050505;
+    border-top:1px solid #333;
     text-align:center;
     padding:25px;
-    border-top:1px solid #333;
     color:#aaa;
-    background:#050505;
 }
 
 footer span{
@@ -193,17 +190,18 @@ footer span{
 }
 
 @media(max-width:650px){
+
     header{
         flex-direction:column;
-        gap:10px;
+        gap:12px;
     }
 
     nav a{
-        margin:0 6px;
+        margin:0 5px;
         font-size:12px;
     }
 
-    .hero h1{
+    h1{
         font-size:32px;
     }
 
@@ -232,102 +230,112 @@ footer span{
 </header>
 
 <section class="hero" id="home">
-    <div class="hero-content">
 
-        <!-- Photo baad mein yahan laga sakte hain -->
-        <div class="profile"></div>
+    <div class="hero-box">
+
+        <div class="photo">👤</div>
 
         <h1>Mohd Anas Siddiqui</h1>
 
         <h2>Computer Professional & Stenographer</h2>
 
         <p>
-            Welcome to my personal website. I am interested in
-            computer work, data entry, documentation, DTP and
-            professional office work.
+            Welcome to my personal website.
+            I am interested in computer work, data entry,
+            documentation, DTP and professional office work.
         </p>
 
-        <a href="#about" class="btn btn-gold">About Me</a>
-        <a href="#contact" class="btn btn-dark">Contact Me</a>
+        <a href="#about" class="btn gold">About Me</a>
+
+        <a href="#contact" class="btn outline">Contact Me</a>
 
     </div>
+
 </section>
 
 <section id="about">
-    <h2 class="section-title">About Me</h2>
+
+    <h2 class="title">About Me</h2>
 
     <div class="about">
+
         <p>
             Hello! I am <strong>Mohd Anas Siddiqui</strong>.
             I have experience in computer-related office work,
             documentation, data entry and typing.
-            I enjoy learning new technology and improving my
-            professional skills.
+            I am always interested in learning new technology
+            and improving my professional skills.
         </p>
+
     </div>
+
 </section>
 
 <section id="skills">
-    <h2 class="section-title">My Skills</h2>
+
+    <h2 class="title">My Skills</h2>
 
     <div class="skills">
 
-        <div class="skill">
+        <div class="card">
             <h3>MS Word</h3>
-            <p>Professional document preparation</p>
+            <p>Document preparation</p>
         </div>
 
-        <div class="skill">
+        <div class="card">
             <h3>MS Excel</h3>
-            <p>Data management and spreadsheets</p>
+            <p>Data management</p>
         </div>
 
-        <div class="skill">
-            <h3>MS PowerPoint</h3>
+        <div class="card">
+            <h3>PowerPoint</h3>
             <p>Professional presentations</p>
         </div>
 
-        <div class="skill">
+        <div class="card">
             <h3>DTP</h3>
-            <p>Design and document formatting</p>
+            <p>Design & formatting</p>
         </div>
 
-        <div class="skill">
+        <div class="card">
             <h3>English Typing</h3>
-            <p>Fast and accurate typing</p>
+            <p>Fast & accurate typing</p>
         </div>
 
-        <div class="skill">
+        <div class="card">
             <h3>Hindi Typing</h3>
-            <p>Hindi typing and documentation</p>
+            <p>Hindi documentation</p>
         </div>
 
     </div>
+
 </section>
 
 <section id="contact">
-    <h2 class="section-title">Contact Me</h2>
 
-    <div class="contact-box">
+    <h2 class="title">Contact Me</h2>
 
-        <div class="contact-item">
+    <div class="contact">
+
+        <div class="contact-box">
             📱 <strong>Mobile</strong><br>
             <a href="tel:+919000000000">Call Me</a>
         </div>
 
-        <div class="contact-item">
+        <div class="contact-box">
             📧 <strong>Email</strong><br>
             <a href="mailto:yourmail@example.com">
                 yourmail@example.com
             </a>
         </div>
 
-        <div class="contact-item">
+        <div class="contact-box">
             📍 <strong>Location</strong><br>
             Prayagraj, Uttar Pradesh, India
         </div>
 
     </div>
+
 </section>
 
 <footer>
