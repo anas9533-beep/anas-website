@@ -89,15 +89,11 @@ nav{
 header{
     min-height:auto;
     width:100%;
-
     display:flex;
     align-items:flex-start;
     justify-content:center;
-
     text-align:center;
-
     padding:130px 20px 65px;
-
     position:relative;
     overflow:hidden;
 
@@ -340,27 +336,30 @@ section{
     color:#d4af37;
 }
 
-/* WHATSAPP */
+/* WHATSAPP BUTTON */
 
 .whatsapp{
     position:fixed;
     right:20px;
     bottom:78px;
 
-    width:58px;
-    height:58px;
-
-    border-radius:50%;
-
-    background:#25D366;
-    color:#fff;
-
     display:flex;
     align-items:center;
     justify-content:center;
 
+    min-width:155px;
+    height:52px;
+
+    padding:0 20px;
+
+    border-radius:30px;
+
+    background:#25D366;
+    color:#fff;
+
     text-decoration:none;
-    font-size:29px;
+    font-size:16px;
+    font-weight:bold;
 
     z-index:999;
 
@@ -370,7 +369,9 @@ section{
 }
 
 .whatsapp:hover{
-    transform:scale(1.1);
+    background:#128C7E;
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 8px 25px rgba(37,211,102,.45);
 }
 
 /* TOP BUTTON */
@@ -494,8 +495,6 @@ footer span{
         border-bottom:1px solid #222;
     }
 
-    /* MOBILE HOME - SAME */
-
     header{
         min-height:100vh;
         padding:105px 15px 60px;
@@ -529,6 +528,14 @@ footer span{
     .about-box{
         padding:25px 18px;
     }
+
+    .whatsapp{
+        right:15px;
+        bottom:75px;
+        min-width:145px;
+        height:50px;
+        font-size:15px;
+    }
 }
 
 /* SMALL MOBILE */
@@ -545,6 +552,8 @@ footer span{
 
     .whatsapp{
         right:15px;
+        min-width:140px;
+        font-size:14px;
     }
 
 }
@@ -854,14 +863,14 @@ Hire Me
 
 </section>
 
-<!-- WHATSAPP -->
+<!-- WHATSAPP BUTTON -->
 
 <a
 href="https://wa.me/918799028385?text=Hello%20Mohd%20Anas%2C%20I%20visited%20your%20website."
 class="whatsapp"
 target="_blank"
 aria-label="Chat on WhatsApp">
-💬
+💬 WhatsApp Me
 </a>
 
 <!-- BACK TO TOP -->
