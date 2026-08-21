@@ -17,28 +17,37 @@
     scroll-behavior:smooth;
 }
 
+html{
+    scroll-padding-top:75px;
+}
+
 body{
-    font-family:Arial, sans-serif;
-    background:#0b0b0b;
+    font-family:Arial,sans-serif;
+    background:#080808;
     color:#fff;
-    line-height:1.6;
+    line-height:1.7;
+    overflow-x:hidden;
 }
 
 /* NAVBAR */
+
 nav{
     position:fixed;
     top:0;
     left:0;
     width:100%;
+    height:70px;
     z-index:1000;
-    background:rgba(5,5,5,.96);
-    border-bottom:1px solid #292929;
-    padding:15px 30px;
+    background:rgba(5,5,5,.94);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(212,175,55,.25);
 }
 
 .nav-container{
     max-width:1200px;
+    height:70px;
     margin:auto;
+    padding:0 25px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -46,7 +55,7 @@ nav{
 
 .logo{
     color:#d4af37;
-    font-size:21px;
+    font-size:20px;
     font-weight:bold;
     text-decoration:none;
 }
@@ -54,7 +63,7 @@ nav{
 .nav-links{
     display:flex;
     list-style:none;
-    gap:25px;
+    gap:24px;
 }
 
 .nav-links a{
@@ -70,44 +79,91 @@ nav{
 
 .menu-btn{
     display:none;
-    font-size:28px;
+    font-size:29px;
     color:#d4af37;
     cursor:pointer;
 }
 
-/* HERO */
+/* HOME */
+
 header{
-    min-height:100vh;
+    min-height:auto;
+    width:100%;
+
     display:flex;
+    align-items:flex-start;
     justify-content:center;
-    align-items:center;
+
     text-align:center;
-    padding:100px 20px 30px;
-    background:linear-gradient(135deg,#080808,#171717,#080808);
+
+    padding:130px 20px 65px;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,#30250b 0%,transparent 35%),
+    linear-gradient(135deg,#050505,#151515,#050505);
+}
+
+header:before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    border:1px solid rgba(212,175,55,.15);
+    animation:pulse 4s infinite;
 }
 
 .hero{
-    max-width:850px;
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+    position:relative;
+    z-index:2;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 18px;
+    border:1px solid rgba(212,175,55,.5);
+    border-radius:30px;
+    color:#d4af37;
+    font-size:14px;
+    margin-bottom:22px;
+    background:rgba(212,175,55,.05);
 }
 
 .hero h1{
-    font-size:48px;
-    color:#d4af37;
+    font-size:56px;
+    line-height:1.2;
     margin-bottom:15px;
+
+    background:linear-gradient(90deg,#fff,#d4af37,#fff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
 .hero h2{
     font-size:25px;
-    margin-bottom:15px;
+    color:#d4af37;
+    margin-bottom:18px;
 }
 
 .hero p{
-    color:#ccc;
+    max-width:700px;
+    margin:0 auto;
+    color:#bbb;
     font-size:17px;
-    margin-bottom:30px;
 }
 
 /* BUTTONS */
+
+.buttons{
+    margin-top:30px;
+}
+
 .btn{
     display:inline-block;
     padding:13px 25px;
@@ -120,92 +176,155 @@ header{
 }
 
 .btn-gold{
-    background:#d4af37;
-    color:#000;
+    background:#111;
+    color:#d4af37;
 }
 
 .btn-dark{
-    color:#d4af37;
     background:#111;
+    color:#d4af37;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 5px 20px rgba(212,175,55,.35);
+    transform:translateY(-4px);
+    box-shadow:0 8px 25px rgba(212,175,55,.25);
 }
 
 /* SECTIONS */
+
 section{
-    padding:80px 20px;
-    max-width:1100px;
-    margin:auto;
+    max-width:1150px;
+    margin:0 auto;
+    padding:90px 20px;
     scroll-margin-top:70px;
 }
 
 .title{
     text-align:center;
     color:#d4af37;
-    font-size:35px;
-    margin-bottom:40px;
+    font-size:38px;
+    margin-bottom:45px;
+}
+
+.title:after{
+    content:"";
+    display:block;
+    width:60px;
+    height:3px;
+    background:#d4af37;
+    margin:12px auto 0;
+    border-radius:5px;
 }
 
 /* ABOUT */
-.about{
-    text-align:center;
+
+.about-box{
     max-width:850px;
-    margin:auto;
+    margin:0 auto;
+    padding:35px;
+    text-align:center;
+
+    background:linear-gradient(145deg,#151515,#0e0e0e);
+
+    border:1px solid #292929;
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+}
+
+.about-box p{
     color:#ccc;
     font-size:17px;
 }
 
+.about-box strong{
+    color:#d4af37;
+}
+
 /* CARDS */
+
 .skills,
 .services,
 .portfolio,
 .experience{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    gap:22px;
 }
 
 .card{
-    background:#151515;
-    border:1px solid #333;
-    border-radius:15px;
-    padding:30px 20px;
+    padding:32px 22px;
     text-align:center;
-    transition:.3s;
+    border-radius:20px;
+
+    background:linear-gradient(145deg,#171717,#0e0e0e);
+
+    border:1px solid #292929;
+
+    transition:.35s;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.card:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:2px;
+    background:#d4af37;
+
+    transform:scaleX(0);
+    transition:.35s;
 }
 
 .card:hover{
-    transform:translateY(-7px);
+    transform:translateY(-8px);
     border-color:#d4af37;
-    box-shadow:0 5px 20px rgba(212,175,55,.12);
+    box-shadow:0 15px 35px rgba(212,175,55,.12);
+}
+
+.card:hover:before{
+    transform:scaleX(1);
+}
+
+.icon{
+    font-size:38px;
+    margin-bottom:15px;
 }
 
 .card h3{
     color:#d4af37;
     margin-bottom:10px;
+    font-size:20px;
 }
 
 .card p{
-    color:#bbb;
+    color:#aaa;
 }
 
 /* CONTACT */
+
 .contact-box{
-    max-width:650px;
-    margin:auto;
-    background:#151515;
-    border-radius:18px;
-    padding:35px 25px;
-    border:1px solid #333;
+    max-width:700px;
+    margin:0 auto;
+    padding:40px 25px;
     text-align:center;
+
+    border-radius:22px;
+
+    background:linear-gradient(145deg,#171717,#0c0c0c);
+
+    border:1px solid #333;
 }
 
 .contact-item{
-    margin:20px 0;
-    font-size:17px;
+    padding:17px;
+    margin:10px 0;
+    border-radius:12px;
+    background:#111;
 }
 
 .contact-item strong{
@@ -221,44 +340,126 @@ section{
     color:#d4af37;
 }
 
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:25px 15px;
-    background:#050505;
-    color:#999;
-    border-top:1px solid #222;
-}
+/* WHATSAPP */
 
-/* BACK TO TOP */
-.top-btn{
+.whatsapp{
     position:fixed;
     right:20px;
-    bottom:20px;
-    width:45px;
-    height:45px;
+    bottom:78px;
+
+    width:58px;
+    height:58px;
+
     border-radius:50%;
-    background:#d4af37;
-    color:#000;
+
+    background:#25D366;
+    color:#fff;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-decoration:none;
-    font-size:22px;
-    font-weight:bold;
+    font-size:29px;
+
     z-index:999;
+
+    box-shadow:0 5px 20px rgba(37,211,102,.35);
+
     transition:.3s;
 }
 
-.top-btn:hover{
-    transform:translateY(-5px);
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* TOP BUTTON */
+
+.top-btn{
+    position:fixed;
+    right:20px;
+    bottom:15px;
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    background:#d4af37;
+    color:#000;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    font-size:22px;
+    font-weight:bold;
+
+    z-index:999;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:28px 15px;
+
+    background:#050505;
+    color:#888;
+
+    border-top:1px solid #222;
+}
+
+footer span{
+    color:#d4af37;
+}
+
+/* ANIMATION */
+
+@keyframes pulse{
+
+    0%,100%{
+        transform:scale(.8);
+        opacity:.3;
+    }
+
+    50%{
+        transform:scale(1.2);
+        opacity:.7;
+    }
+
+}
+
+/* DESKTOP FIX */
+
+@media(min-width:769px){
+
+    header{
+        min-height:0;
+        height:auto;
+        padding-top:120px;
+        padding-bottom:55px;
+    }
+
+    .hero{
+        max-width:900px;
+    }
+
 }
 
 /* MOBILE */
+
 @media(max-width:768px){
 
+    .nav-container{
+        padding:0 18px;
+        height:65px;
+    }
+
     nav{
-        padding:14px 20px;
+        height:65px;
     }
 
     .menu-btn{
@@ -269,12 +470,18 @@ footer{
         position:absolute;
         top:65px;
         left:0;
+
         width:100%;
+
         background:#080808;
-        flex-direction:column;
-        text-align:center;
-        gap:0;
+
         display:none;
+        flex-direction:column;
+
+        gap:0;
+
+        text-align:center;
+
         border-top:1px solid #292929;
     }
 
@@ -287,262 +494,409 @@ footer{
         border-bottom:1px solid #222;
     }
 
+    /* MOBILE HOME - SAME */
+
+    header{
+        min-height:100vh;
+        padding:105px 15px 60px;
+        align-items:flex-start;
+    }
+
+    .hero{
+        margin-top:10px;
+    }
+
     .hero h1{
-        font-size:34px;
+        font-size:38px;
     }
 
     .hero h2{
         font-size:21px;
     }
 
+    .hero p{
+        font-size:15px;
+    }
+
     .title{
-        font-size:29px;
+        font-size:30px;
     }
 
     section{
-        padding:65px 15px;
+        padding:70px 15px;
+    }
+
+    .about-box{
+        padding:25px 18px;
     }
 }
+
+/* SMALL MOBILE */
+
+@media(max-width:400px){
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .btn{
+        width:90%;
+    }
+
+    .whatsapp{
+        right:15px;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
 <!-- NAVIGATION -->
+
 <nav>
-    <div class="nav-container">
 
-        <a href="#home" class="logo">Mohd Anas Siddiqui</a>
+<div class="nav-container">
 
-        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+<a href="#home" class="logo">
+Mohd Anas Siddiqui
+</a>
 
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home" onclick="closeMenu()">Home</a></li>
-            <li><a href="#about" onclick="closeMenu()">About</a></li>
-            <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
-            <li><a href="#services" onclick="closeMenu()">Services</a></li>
-            <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
-            <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
-            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-        </ul>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-    </div>
+<ul class="nav-links" id="navLinks">
+
+<li><a href="#home" onclick="closeMenu()">Home</a></li>
+<li><a href="#about" onclick="closeMenu()">About</a></li>
+<li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+<li><a href="#services" onclick="closeMenu()">Services</a></li>
+<li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
+<li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+<li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+
+</ul>
+
+</div>
+
 </nav>
 
 <!-- HOME -->
+
 <header id="home">
 
-    <div class="hero">
+<div class="hero">
 
-        <h1>Mohd Anas Siddiqui</h1>
+<div class="badge">
+✦ Welcome to My Official Website
+</div>
 
-        <h2>Web Designer & Digital Creator</h2>
+<h1>Mohd Anas Siddiqui</h1>
 
-        <p>
-            Welcome to my personal website. I am a Computer Professional,
-            Web Designer and Digital Creator.
-        </p>
+<h2>Web Designer & Digital Creator</h2>
 
-        <a href="#skills" class="btn btn-gold">My Skills</a>
+<p>
+I create modern, responsive and professional websites
+and digital solutions with creativity and technology.
+</p>
 
-        <a href="#about" class="btn btn-dark">About Me</a>
+<div class="buttons">
 
-        <a href="#contact" class="btn btn-dark">Hire Me</a>
+<a href="#skills" class="btn btn-dark">
+My Skills
+</a>
 
-    </div>
+<a href="#about" class="btn btn-dark">
+About Me
+</a>
+
+<a href="#contact" class="btn btn-dark">
+Hire Me
+</a>
+
+</div>
+
+</div>
 
 </header>
 
 <!-- ABOUT -->
+
 <section id="about">
 
-    <h2 class="title">About Me</h2>
+<h2 class="title">About Me</h2>
 
-    <div class="about">
+<div class="about-box">
 
-        <p>
-            Hello! I am <strong>Mohd Anas Siddiqui</strong>.
-            I am a Web Designer, Digital Creator and Computer Professional.
-            I enjoy creating modern websites and working with digital
-            technology.
-        </p>
+<p>
+Hello! I am
+<strong>Mohd Anas Siddiqui</strong>.
+I am a Web Designer, Digital Creator and Computer Professional.
+I enjoy creating modern websites, digital projects and
+professional online experiences.
+</p>
 
-    </div>
+</div>
 
 </section>
 
 <!-- SKILLS -->
+
 <section id="skills">
 
-    <h2 class="title">My Skills</h2>
+<h2 class="title">My Skills</h2>
 
-    <div class="skills">
+<div class="skills">
 
-        <div class="card">
-            <h3>Web Designing</h3>
-            <p>Creating modern, clean and responsive websites.</p>
-        </div>
+<div class="card">
+<div class="icon">💻</div>
+<h3>Web Designing</h3>
+<p>
+Modern, clean and responsive website design.
+</p>
+</div>
 
-        <div class="card">
-            <h3>HTML & CSS</h3>
-            <p>Building attractive and mobile-friendly web pages.</p>
-        </div>
+<div class="card">
+<div class="icon">🌐</div>
+<h3>HTML & CSS</h3>
+<p>
+Attractive and mobile-friendly web pages.
+</p>
+</div>
 
-        <div class="card">
-            <h3>DTP</h3>
-            <p>Digital publishing and professional document designing.</p>
-        </div>
+<div class="card">
+<div class="icon">🎨</div>
+<h3>DTP</h3>
+<p>
+Digital publishing and professional document designing.
+</p>
+</div>
 
-        <div class="card">
-            <h3>Typing</h3>
-            <p>English 50 WPM & Hindi 35 WPM.</p>
-        </div>
+<div class="card">
+<div class="icon">⌨️</div>
+<h3>Typing</h3>
+<p>
+English 50 WPM & Hindi 35 WPM.
+</p>
+</div>
 
-        <div class="card">
-            <h3>Computer Work</h3>
-            <p>Professional computer operations and digital tasks.</p>
-        </div>
+<div class="card">
+<div class="icon">🖥️</div>
+<h3>Computer Work</h3>
+<p>
+Professional computer operations and digital tasks.
+</p>
+</div>
 
-        <div class="card">
-            <h3>Digital Creator</h3>
-            <p>Creating digital content and online projects.</p>
-        </div>
+<div class="card">
+<div class="icon">🚀</div>
+<h3>Digital Creator</h3>
+<p>
+Creative digital content and online projects.
+</p>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 <!-- SERVICES -->
+
 <section id="services">
 
-    <h2 class="title">My Services</h2>
+<h2 class="title">My Services</h2>
 
-    <div class="services">
+<div class="services">
 
-        <div class="card">
-            <h3>Website Design</h3>
-            <p>Modern and responsive personal websites.</p>
-        </div>
+<div class="card">
+<div class="icon">🌐</div>
+<h3>Website Design</h3>
+<p>
+Modern and responsive personal websites.
+</p>
+</div>
 
-        <div class="card">
-            <h3>Web Page Creation</h3>
-            <p>Clean and professional HTML & CSS web pages.</p>
-        </div>
+<div class="card">
+<div class="icon">📱</div>
+<h3>Web Page Creation</h3>
+<p>
+Clean and professional HTML & CSS web pages.
+</p>
+</div>
 
-        <div class="card">
-            <h3>DTP Services</h3>
-            <p>Professional digital publishing and document work.</p>
-        </div>
+<div class="card">
+<div class="icon">🖌️</div>
+<h3>DTP Services</h3>
+<p>
+Professional digital publishing and document work.
+</p>
+</div>
 
-        <div class="card">
-            <h3>Computer Services</h3>
-            <p>Computer-based digital and documentation work.</p>
-        </div>
+<div class="card">
+<div class="icon">⚙️</div>
+<h3>Computer Services</h3>
+<p>
+Computer-based digital and documentation work.
+</p>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 <!-- PORTFOLIO -->
+
 <section id="portfolio">
 
-    <h2 class="title">My Portfolio</h2>
+<h2 class="title">My Portfolio</h2>
 
-    <div class="portfolio">
+<div class="portfolio">
 
-        <div class="card">
-            <h3>Personal Website</h3>
-            <p>My professional personal website created with HTML and CSS.</p>
-        </div>
+<div class="card">
+<div class="icon">👨‍💻</div>
+<h3>Personal Website</h3>
+<p>
+Professional personal website created with HTML and CSS.
+</p>
+</div>
 
-        <div class="card">
-            <h3>Digital Projects</h3>
-            <p>Creative digital projects and online work.</p>
-        </div>
+<div class="card">
+<div class="icon">🚀</div>
+<h3>Digital Projects</h3>
+<p>
+Creative digital projects and online work.
+</p>
+</div>
 
-        <div class="card">
-            <h3>Web Design Projects</h3>
-            <p>Modern and responsive website design projects.</p>
-        </div>
+<div class="card">
+<div class="icon">💡</div>
+<h3>Web Design Projects</h3>
+<p>
+Modern and responsive website design projects.
+</p>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 <!-- EXPERIENCE -->
+
 <section id="experience">
 
-    <h2 class="title">Experience</h2>
+<h2 class="title">Experience</h2>
 
-    <div class="experience">
+<div class="experience">
 
-        <div class="card">
-            <h3>Computer Professional</h3>
-            <p>Professional experience in computer operations and digital work.</p>
-        </div>
+<div class="card">
+<div class="icon">💼</div>
+<h3>Computer Professional</h3>
+<p>
+Professional experience in computer operations
+and digital work.
+</p>
+</div>
 
-        <div class="card">
-            <h3>Data Entry</h3>
-            <p>Experience in data entry, typing and documentation work.</p>
-        </div>
+<div class="card">
+<div class="icon">⌨️</div>
+<h3>Data Entry</h3>
+<p>
+Experience in data entry, typing and documentation work.
+</p>
+</div>
 
-        <div class="card">
-            <h3>Web Designing</h3>
-            <p>Creating modern personal websites and digital projects.</p>
-        </div>
+<div class="card">
+<div class="icon">🌐</div>
+<h3>Web Designing</h3>
+<p>
+Creating modern personal websites and digital projects.
+</p>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 <!-- CONTACT -->
+
 <section id="contact">
 
-    <h2 class="title">Contact Me</h2>
+<h2 class="title">Contact Me</h2>
 
-    <div class="contact-box">
+<div class="contact-box">
 
-        <div class="contact-item">
-            <strong>📞 Mobile</strong><br>
-            <a href="tel:8799028385">8799028385</a>
-        </div>
+<div class="contact-item">
+<strong>📞 Mobile</strong><br>
+<a href="tel:8799028385">
+8799028385
+</a>
+</div>
 
-        <div class="contact-item">
-            <strong>✉️ Email</strong><br>
-            <a href="mailto:anas9533@gmail.com">
-                anas9533@gmail.com
-            </a>
-        </div>
+<div class="contact-item">
+<strong>✉️ Email</strong><br>
+<a href="mailto:anas9533@gmail.com">
+anas9533@gmail.com
+</a>
+</div>
 
-        <div class="contact-item">
-            <strong>📍 Location</strong><br>
-            Prayagraj, Uttar Pradesh, India
-        </div>
+<div class="contact-item">
+<strong>📍 Location</strong><br>
+Prayagraj, Uttar Pradesh, India
+</div>
 
-        <a href="mailto:anas9533@gmail.com" class="btn btn-gold">
-            Hire Me
-        </a>
+<a href="mailto:anas9533@gmail.com"
+class="btn btn-gold">
+Hire Me
+</a>
 
-    </div>
+</div>
 
 </section>
 
+<!-- WHATSAPP -->
+
+<a
+href="https://wa.me/918799028385?text=Hello%20Mohd%20Anas%2C%20I%20visited%20your%20website."
+class="whatsapp"
+target="_blank"
+aria-label="Chat on WhatsApp">
+💬
+</a>
+
 <!-- BACK TO TOP -->
-<a href="#home" class="top-btn">↑</a>
+
+<a href="#home" class="top-btn">
+↑
+</a>
 
 <!-- FOOTER -->
+
 <footer>
-    © 2026 Mohd Anas Siddiqui. All Rights Reserved.
+
+© 2026 <span>Mohd Anas Siddiqui</span>.
+All Rights Reserved.
+
 </footer>
 
 <script>
 
 function toggleMenu(){
-    document.getElementById("navLinks").classList.toggle("active");
+
+document
+.getElementById("navLinks")
+.classList
+.toggle("active");
+
 }
 
 function closeMenu(){
-    document.getElementById("navLinks").classList.remove("active");
+
+document
+.getElementById("navLinks")
+.classList
+.remove("active");
+
 }
 
 </script>
